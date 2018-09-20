@@ -16,6 +16,11 @@ public class ShopController {
     @Autowired
     ShopRepository shopRepository;
 
+    @GetMapping("/")
+    public String getLandingText() {
+        return "Shopify Backend Coding Challenge - David Zhang";
+    }
+
     @GetMapping("/shops")
     public List<Shop> getAllShops() {
         return shopRepository.findAll();
